@@ -29,7 +29,6 @@ public class Sign : MonoBehaviour
             else
             {
                 dialogBox.SetActive(true);
-                dialogText.text = dialog;
                 StopAllCoroutines();
                 StartCoroutine(TypeSentence(dialog));
             }
