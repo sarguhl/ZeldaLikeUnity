@@ -4,20 +4,11 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /// <summary>
+    /// This function is triggered once an object with the tag "breakable" enters the collision. 
+    /// ACTION: Executes "Smash" funtion on Component "Pod".
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("breakable"))
