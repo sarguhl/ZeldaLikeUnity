@@ -17,7 +17,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 change;
     private Animator anim;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update.
     void Start()
     {
         currentState = PlayerState.walk;
@@ -25,7 +25,7 @@ public class CharacterMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame.
     void Update()
     {
         change = Vector2.zero;
