@@ -1699,17 +1699,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1353401625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed1cdbf350dcca845be4ca7624873bac, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a5fb5eac9aa7c7438e8f74e92b59b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  enemyName: Logette
-  baseAttack: 1
-  moveSpeed: 1.5
-  target: {fileID: 0}
-  homePosition: {fileID: 0}
-  chaseRadius: 4
-  attackRadius: 1
+  thrust: 5
+  knockTime: 0.4
 --- !u!1 &1669717170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +2001,7 @@ GameObject:
   - component: {fileID: 1743871487}
   m_Layer: 0
   m_Name: Log
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2130,7 +2124,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743871481}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2140,7 +2134,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &1743871487
@@ -2155,6 +2149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1cdbf350dcca845be4ca7624873bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
   health: 2
   enemyName: Loggete
   baseAttack: 1
@@ -2162,7 +2157,8 @@ MonoBehaviour:
   target: {fileID: 1353401630}
   homePosition: {fileID: 0}
   chaseRadius: 4
-  attackRadius: 2
+  attackRadius: 1.2
+  anim: {fileID: 0}
 --- !u!1001 &1779970987
 PrefabInstance:
   m_ObjectHideFlags: 0
